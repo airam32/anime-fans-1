@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Web de Anime - Airam</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Bienvenidos a mi Web de Anime - Airam</h1>
+        <input type="text" id="searchBar" placeholder="Buscar anime...">
+        <select id="categoryFilter">
+            <option value="">Filtrar por categoría</option>
+            <option value="acción">Acción</option>
+            <option value="romance">Romance</option>
+            <option value="aventura">Aventura</option>
+            <option value="fantasía">Fantasía</option>
+            <option value="suspenso">Suspenso</option>
+        </select>
+    </header>
+
+    <section class="anime-list" id="animeList">
+        <!-- Los animes se cargarán aquí con JavaScript -->
+    </section>
+
+    <div id="animeDetails" class="anime-details">
+        <button onclick="closeDetails()">Cerrar</button>
+        <h2 id="animeTitle"></h2>
+        <div id="animeVideo"></div>
+        <p id="animeDescription"></p>
+        <h3>Lore</h3>
+        <p id="animeLore"></p>
+        <h3>Puntuación</h3>
+        <input type="number" id="ratingInput" min="1" max="5" placeholder="Tu puntuación (1-5)">
+        <button onclick="submitRating()">Enviar puntuación</button>
+        <p id="ratingDisplay"></p>
+
+        <h3>Comentarios</h3>
+        <textarea id="commentInput" placeholder="Deja un comentario"></textarea>
+        <button onclick="submitComment()">Enviar comentario</button>
+        <div id="commentsSection"></div>
+    </div>
+
+    <footer>
+        <p>¡Gracias por visitar! Hecho por Airam.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
